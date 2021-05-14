@@ -1,0 +1,45 @@
+bootstrap: docker
+from: jupyter/scipy-notebook
+
+%post
+  apt-get update
+  apt-get -y upgrade
+  apt-get clean
+
+  # Install anaconda if it is not installed yet
+  if [ ! -d /opt/conda ]; then
+    wget https://repo.continuum.io/archive/Anaconda3-2018.12-Linux-x86_64.sh \
+    -O ~/conda.sh && \
+    bash ~/conda.sh -b -p /opt/conda && \
+    rm ~/conda.sh
+  fi
+
+  # Set anaconda path
+  export PATH=/opt/conda/bin:$PATH
+
+  # Update conda; NOTE: for some reason this doesnt actually update conda at the moment...
+  conda update -y -n base conda
+
+  # Download alternative version of python if needed (default is 3.8)
+  conda install -y python=3.7
+
+  # Install conda packages; -y is used to silently install
+  conda config --add channels conda-forge
+
+  conda install -y numpy
+  conda install -y scipy
+  conda install -y joblib
+  conda install -y tqdm
+  conda install -y vim
+  conda install -y pynfft
+
+  conda clean --tarballs
+
+  # Install git and pip3
+  apt-get -y install git-all
+  apt-get -y install python3-pip
+  
+%environment
+  export PYTHONPATH=/opt/conda/lib/python3.7/site-packages:$PYTHONPATH
+
+  export LC_ALL=C
