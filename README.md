@@ -6,7 +6,7 @@
 
 > [**End-to-End Sequential Sampling and Reconstruction for MR Imaging**](http://arxiv.org/abs/2105.06460),            
 > Tianwei Yin*, Zihui Wu*, He Sun, Adrian V. Dalca, Yisong Yue, Katherine L. Bouman (*equal contributions)         
-> *arXiv technical report ([arXiv 2006.11275](http://arxiv.org/abs/2105.06460))*  
+> *arXiv technical report ([arXiv 2105.06460](http://arxiv.org/abs/2105.06460))*  
 
 
     @article{yin2021end,
