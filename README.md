@@ -28,6 +28,22 @@ Accelerated MRI shortens acquisition time by subsampling in the measurement k-sp
 
 ## Main Results 
 
+#### Line-constrained Sampling
+
+| Model   | Accelearation | SSIM |
+|---------|---------------|------|
+| Loupe   |    4x         |  89.5    |
+| Seq1   |    4x         |   90.8    |
+| Seq4   |    4x         |   91.2    |
+
+
+#### 2D Point Sampling 
+
+| Model   | Accelearation | SSIM |
+|---------|---------------|------|
+| Loupe   |    4x         |  92.4    |
+| Seq1   |    4x         |   92.7    |
+| Seq4   |    4x         |   92.9     | 
 
 ## Installation
 
