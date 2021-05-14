@@ -4,9 +4,9 @@
 <p align="center"> <img src='docs/2d_animation.gif' align="center" height="300px"> </p>
 <p align="center"> <img src='docs/1d_animation.gif' align="center" height="300px"> </p>
 
-> [**End-to-End Sequential Sampling and Reconstruction for MR Imaging**](),            
+> [**End-to-End Sequential Sampling and Reconstruction for MR Imaging**](http://arxiv.org/abs/2105.06460),            
 > Tianwei Yin*, Zihui Wu*, He Sun, Adrian V. Dalca, Yisong Yue, Katherine L. Bouman (*equal contributions)         
-> *arXiv technical report ([]())*  
+> *arXiv technical report ([arXiv 2006.11275](http://arxiv.org/abs/2105.06460))*  
 
 
     @article{yin2021end,
