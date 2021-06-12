@@ -13,6 +13,7 @@ import activemri.envs.masks
 import activemri.envs.util
 import fastmri
 from activemri.data.real_knee_data import RealKneeData
+from activemri.data.real_brain_data import RealBrainData
 from typing import (
     Any,
     Callable,
@@ -137,6 +138,45 @@ class LOUPERealKspaceEnv(LOUPEDataEnv):
             random_rotate=self.options.random_rotate 
         )
         test_data = RealKneeData(
+            test_path,
+            self.options.resolution,
+            ActiveMRIEnv._void_transform,
+            self.options.noise_type,
+            self.options.noise_level,
+            custom_split='test',
+            random_rotate=self.options.random_rotate 
+        )
+
+        return train_data, val_data, test_data
+
+class LoupeBrainEnv(LOUPEDataEnv):
+    def __init__(self, options):
+        super().__init__(options)
+
+    def _create_datasets(self):
+        root_path = pathlib.Path(self._data_location)
+        train_path = root_path / "train_no_kspace"
+        val_path = root_path / "val_no_kspace"
+        test_path = root_path / "test_no_kspace"
+
+        train_data = RealBrainData(
+            train_path,
+            self.options.resolution,
+            ActiveMRIEnv._void_transform,
+            self.options.noise_type,
+            self.options.noise_level,
+            random_rotate=self.options.random_rotate 
+        )
+        val_data = RealBrainData(
+            val_path,
+            self.options.resolution,
+            ActiveMRIEnv._void_transform,
+            self.options.noise_type,
+            self.options.noise_level,
+            custom_split='val',
+            random_rotate=self.options.random_rotate 
+        )
+        test_data = RealBrainData(
             test_path,
             self.options.resolution,
             ActiveMRIEnv._void_transform,

@@ -56,7 +56,7 @@ if __name__ == "__main__":
     # Data parameters
     parser.add_argument('--data-path', type=pathlib.Path, required=False,
                         help='Path to the dataset')
-    parser.add_argument('--dataset-name', type=str, choices=['fashion-mnist', 'dicom-knee', 'synthetic', 'real-knee'],
+    parser.add_argument('--dataset-name', type=str, choices=['fashion-mnist', 'dicom-knee', 'real-knee', 'brain'],
         required=True, help='name of the dataset')
     parser.add_argument('--sample-rate', type=float, default=1.,
                         help='Fraction of total volumes to include')
@@ -171,6 +171,9 @@ if __name__ == "__main__":
         args.data_path = 'datasets/knee'
         # args.resolution = [128, 128]
         env = loupe_envs.LOUPEDICOMEnv(args)
+    elif args.dataset_name == 'brain':
+        args.data_path = 'datasets/brain'
+        env = loupe_envs.LoupeBrainEnv(args)
     elif args.dataset_name == 'real-knee':
         args.data_path = 'datasets/knee'
         # args.resolution = [128, 128]

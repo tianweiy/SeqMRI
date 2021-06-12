@@ -35,6 +35,16 @@ bash examples/loupe/train_loupe.sh   1 16  ssim real-knee  8 1e-3 10 0.5 128 0 c
 bash examples/loupe/train_loupe.sh   1 12  ssim real-knee  16 1e-3 10 0.5 128 0 cuda:0 0 0 0 0 0
 ```
 
+```bash
+# 4x line constrained sampling
+bash examples/loupe/train_loupe.sh   1 4  ssim brain 4 5e-5 10 0.5 128 0 cuda:0 1 0 0 0 0
+
+# 4x 2d point sampling 
+bash examples/loupe/train_loupe.sh   1 22  ssim brain  4 1e-3 10 0.5 128 0 cuda:0 0 0 0 0 0
+
+```
+
+
 #### Loupe Evaluation
 
 

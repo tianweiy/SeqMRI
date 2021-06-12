@@ -53,7 +53,7 @@ if __name__ == "__main__":
     parser.add_argument('--seed', default=42, type=int, help='Seed for random number generators')
     parser.add_argument('--resolution', default=[128, 128], nargs='+', type=int, help='Resolution of images')
 
-    parser.add_argument('--dataset-name', type=str, choices=['fashion-mnist', 'dicom-knee', 'real-knee'],
+    parser.add_argument('--dataset-name', type=str, choices=['fashion-mnist', 'dicom-knee', 'real-knee', 'brain'],
         required=True, help='name of the dataset')
     parser.add_argument('--sample-rate', type=float, default=1.,
                         help='Fraction of total volumes to include')
@@ -133,6 +133,9 @@ if __name__ == "__main__":
         args.data_path = 'datasets/knee'
         # args.resolution = [128, 128]
         env = loupe_envs.LOUPERealKspaceEnv(args)
+    elif args.dataset_name == 'brain':
+        args.data_path = 'datasets/brain'
+        env = loupe_envs.LoupeBrainEnv(args)
     else:
         raise NotImplementedError
 
