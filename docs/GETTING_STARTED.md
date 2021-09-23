@@ -62,13 +62,13 @@ Remeber to replace EXP_DIR with the path to the directory that contains the save
 bash examples/sequential/train_sequential.sh  NUM_STEP 1 4 ssim real-knee  4 5e-5  cuda:0 10 0.5 128 0 1
 
 # 4x 2d point sampling 
-bash examples/sequential/train_sequential.sh  NUM_STEP 1 22 ssim real-knee  4 5e-5  cuda:0 10 0.5 128 0 0
+bash examples/sequential/train_sequential.sh  NUM_STEP 1 22 ssim real-knee  4 1e-3  cuda:0 10 0.5 128 0 0
 
 # 8x 2d point sampling
-bash examples/sequential/train_sequential.sh  NUM_STEP 1 16 ssim real-knee  8 5e-5  cuda:0 10 0.5 128 0 0
+bash examples/sequential/train_sequential.sh  NUM_STEP 1 16 ssim real-knee  8 1e-3  cuda:0 10 0.5 128 0 0
 
 # 16x 2d point sampling
-bash examples/sequential/train_sequential.sh  NUM_STEP 1 12 ssim real-knee  16 5e-5  cuda:0 10 0.5 128 0 0
+bash examples/sequential/train_sequential.sh  NUM_STEP 1 12 ssim real-knee  16 1e-3  cuda:0 10 0.5 128 0 0
 ```
 
 Remember to change NUM_STEP to the a value in [1,2,4] for sequential sampling. 
