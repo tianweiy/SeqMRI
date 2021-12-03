@@ -97,5 +97,3 @@ bash examples/sequential/test_sequential.sh EXP_DIR real-knee
 | Loupe   |    4x         |  92.4    |  [URL](https://drive.google.com/drive/folders/1cTpc1V8EuLVyZ4iy3EIW_XhEzgmiecgN?usp=sharing) |
 | Seq1   |    4x         |   92.7    |  [URL](https://drive.google.com/drive/folders/1ptKDYk7Dbff9kOJBXUPkpmLqoNoPA4_z?usp=sharing) |
 | Seq4   |    4x         |   92.9     |  [URL](https://drive.google.com/drive/folders/1KG8vzruVlJkxlyywZUXDkQdXGyFJzaNB?usp=sharing) |
-
-More models for traditional baseline methods (Random, Spectrum, etc..) are coming soon. 
